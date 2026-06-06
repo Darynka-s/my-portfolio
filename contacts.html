@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти | Дарина Сокальська</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        DS
+    </div>
+
+    <nav class="nav" id="nav">
+        <a href="index.html">Головна</a>
+        <a href="about.html">Про мене</a>
+        <a href="projects.html">Проєкти</a>
+        <a href="contacts.html" class="active">Контакти</a>
+    </nav>
+
+    <div class="header-buttons">
+        <button id="themeToggle">🌙</button>
+        <button id="menuBtn" class="menu-btn">☰</button>
+    </div>
+
+</header>
+
+<section class="page-section">
+
+    <h1 class="page-title">Контакти</h1>
+
+    <div class="contacts-wrapper">
+
+        <div class="contact-card">
+            <h2>Email</h2>
+            <p>
+                <a href="mailto:sokalskadasha31@gmail.com">
+                    sokalskadasha31@gmail.com
+                </a>
+            </p>
+        </div>
+
+        <div class="contact-card">
+            <h2>Telegram</h2>
+            <p>
+                <a href="https://t.me/s_kystiik_s" target="_blank">
+                    @s_kystiik_s
+                </a>
+            </p>
+        </div>
+
+        <div class="contact-card">
+            <h2>GitHub</h2>
+            <p>
+                <a href="https://github.com/Darynka-s" target="_blank">
+                    github.com/Darynka-s
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="contact-form">
+        <h2>Зворотний зв'язок</h2>
+        <form id="feedbackForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Повідомлення:</label>
+            <textarea id="message" rows="5" required></textarea>
+
+            <button type="submit">Надіслати</button>
+        </form>
+        <p id="formStatus"></p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Вебстудія Дарини Сокальської</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
