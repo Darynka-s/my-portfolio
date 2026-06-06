@@ -110,7 +110,7 @@ body{
     display:none;
 }
 
-
+/* HERO */
 .hero{
     min-height:85vh;
     display:flex;
@@ -378,18 +378,10 @@ footer{
 }
 
 
-@media(max-width:992px){
-    .hero{
-        flex-direction:column;
-        text-align:center;
-    }
-    .hero-content h1{
-        font-size:48px;
-    }
-    .preview,
-    .projects-grid,
-    .contacts-wrapper{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .about-container{
-        flex-direction:
+@keyframes slideIn {
+    from { opacity:0; transform: translateX(100%); }
+    to { opacity:1; transform: translateX(0); }
+}
+@keyframes slideOut {
+    from { opacity:1; transform: translateX(0); }
+    to { opacity:0;
