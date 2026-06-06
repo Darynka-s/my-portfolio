@@ -28,17 +28,23 @@ const nav = document.getElementById("nav");
 
 if (menuBtn && nav) {
     menuBtn.addEventListener("click", () => {
-        nav.classList.toggle("show");
+        if (!nav.classList.contains("show")) {
+            nav.classList.add("show");
+            nav.style.animation = "slideIn 0.3s forwards";
+        } else {
+            nav.style.animation = "slideOut 0.3s forwards";
+            setTimeout(() => nav.classList.remove("show"), 300);
+        }
     });
 
     const navLinks = document.querySelectorAll(".nav a");
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
-            nav.classList.remove("show");
+            nav.style.animation = "slideOut 0.3s forwards";
+            setTimeout(() => nav.classList.remove("show"), 300);
         });
     });
 }
-
 
 window.addEventListener("load", () => {
     const cards = document.querySelectorAll(".card, .project-card, .contact-card");
@@ -51,7 +57,7 @@ window.addEventListener("load", () => {
         setTimeout(() => {
             card.style.opacity = "1";
             card.style.transform = "translateY(0)";
-        }, index * 200); 
+        }, index * 200);
     });
 });
 
@@ -88,3 +94,5 @@ if (feedbackForm && formStatus) {
         feedbackForm.reset();
     });
 }
+
+
